@@ -1,0 +1,129 @@
+# spring-petclinic
+
+## Summary
+
+| Metric | Value |
+|--------|-------|
+| Total Issues | 8 |
+| Mandatory Blockers | 3 |
+| Potential Issues | 3 |
+
+## Component Information
+
+| Property | Value |
+|----------|-------|
+| Language | Java |
+| Frameworks | Spring Boot, Spring |
+| Build tools | Gradle, Maven |
+| JDK version | 17 |
+
+## Cloud Readiness Issues
+
+| Issue Name | Criticality | Story Points | Occurrences |
+|------------|-------------|--------------|-------------|
+| Use of unsecured network protocols or URI libraries | Mandatory | 3 | [6](#Use_of_unsecured_network_protocols_or_URI_libraries) |
+| Local HTTP Calls | Mandatory | 3 | [6](#Local_HTTP_Calls) |
+| Local JDBC Calls | Mandatory | 5 | [2](#Local_JDBC_Calls) |
+| MySQL database found | Potential | 5 | [4](#MySQL_database_found) |
+| PostgreSQL database found | Potential | 5 | [3](#PostgreSQL_database_found) |
+| Password found in configuration file | Potential | 3 | [2](#Password_found_in_configuration_file) |
+| Avoid using hardcoded URLs (HTTP protocol) in source code | Optional | 3 | [6](#Avoid_using_hardcoded_URLs_HTTP_protocol_in_source_code) |
+
+### Issue Details
+
+<details id="Use_of_unsecured_network_protocols_or_URI_libraries">
+<summary><b>Use of unsecured network protocols or URI libraries</b> — affected files</summary>
+
+- `src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java (line 54)`
+- `src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java (line 61)`
+- `src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java (line 69)`
+- `src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java (line 89)`
+- `src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java (line 64)`
+- `src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java (line 81)`
+
+</details>
+
+<details id="Local_HTTP_Calls">
+<summary><b>Local HTTP Calls</b> — affected files</summary>
+
+- `src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java (line 69)`
+- `src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java (line 54)`
+- `src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java (line 61)`
+- `src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java (line 89)`
+- `src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java (line 64)`
+- `src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java (line 81)`
+
+</details>
+
+<details id="Local_JDBC_Calls">
+<summary><b>Local JDBC Calls</b> — affected files</summary>
+
+- `src/main/resources/application-mysql.properties (line 3)`
+- `src/main/resources/application-postgres.properties (line 3)`
+
+</details>
+
+<details id="MySQL_database_found">
+<summary><b>MySQL database found</b> — affected files</summary>
+
+- `build.gradle (line 47)`
+- `build.gradle (line 56)`
+- `src/main/resources/application-mysql.properties (line 3)`
+
+</details>
+
+<details id="PostgreSQL_database_found">
+<summary><b>PostgreSQL database found</b> — affected files</summary>
+
+- `build.gradle (line 48)`
+- `src/main/resources/application-postgres.properties (line 3)`
+
+</details>
+
+<details id="Password_found_in_configuration_file">
+<summary><b>Password found in configuration file</b> — affected files</summary>
+
+- `src/main/resources/application-mysql.properties (line 5)`
+- `src/main/resources/application-postgres.properties (line 5)`
+
+</details>
+
+<details id="Avoid_using_hardcoded_URLs_HTTP_protocol_in_source_code">
+<summary><b>Avoid using hardcoded URLs (HTTP protocol) in source code</b> — affected files</summary>
+
+- `src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java (line 54)`
+- `src/test/java/org/springframework/samples/petclinic/PetClinicIntegrationTests.java (line 61)`
+- `src/test/java/org/springframework/samples/petclinic/PostgresIntegrationTests.java (line 89)`
+- `src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java (line 64)`
+- `src/test/java/org/springframework/samples/petclinic/system/CrashControllerIntegrationTests.java (line 81)`
+- `src/test/java/org/springframework/samples/petclinic/MySqlIntegrationTests.java (line 69)`
+
+</details>
+
+## Upgrade Issues
+
+| Issue Name | Criticality | Story Points | Occurrences |
+|------------|-------------|--------------|-------------|
+| Java Version is not the latest LTS | Optional | 8 | [2](#Java_Version_is_not_the_latest_LTS) |
+
+### Issue Details
+
+<details id="Java_Version_is_not_the_latest_LTS">
+<summary><b>Java Version is not the latest LTS</b> — affected files</summary>
+
+- `pom.xml (line 19)`
+- `build.gradle (line 19)`
+
+</details>
+
+---
+
+## Codebase Insights
+
+> **Note:** These documents are generated by AI and may contain inaccuracies or incomplete information. Please review carefully.
+
+> **Codebase Insights aren't available yet.**
+>
+> These documents are generated when assessment runs with **Full analysis** coverage. Re-run the assessment and set `analysisCoverage: full` to enable them.
+
+[Share feedback](https://aka.ms/ghcp-appmod/feedback)
